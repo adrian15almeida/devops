@@ -21,10 +21,20 @@ pipeline{
                 echo ' testing......'
 
             }
+        }
 
-        // Stage3 : Deploying
-        stage ('Test'){
+        // Stage3 : Deplying the code
+        stage ('Deploying'){
             steps {
-                echo ' deploying......'
+                echo ' deploying'
+     
+                }
 
             }
+        }
+
+        
+        
+    }
+
+}
