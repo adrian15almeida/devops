@@ -1,29 +1,30 @@
 pipeline {
     agent any
+    
     tools {
-        maven "Maven 3.6.3"
+        maven 'maven'
     }
-
+    
     stages {
-        stage ('Build') {
+        stage('Build') {
             steps {
+                echo 'Building...'
                 sh 'mvn clean install package'
             }
         }
-
-        stage ('Test') {
+        
+        stage('Test') {
             steps {
-                echo ' testing......'
+                echo 'Testing...'
                 // Add your testing steps here
             }
         }
-
-        stage ('Deploying') {
+        
+        stage('Deploying') {
             steps {
-                echo ' deploying'
+                echo 'Deploying...'
                 // Add your deployment steps here
             }
         }
     }
 }
-
